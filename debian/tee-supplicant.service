@@ -3,7 +3,9 @@ Description=TEE Supplicant
 
 [Service]
 Type=simple
+ExecStartPre=/usr/sbin/modprobe optee
 ExecStart=/usr/sbin/tee-supplicant
+ExecStop=/usr/sbin/rmmod tpm_ftpm_tee
 
 [Install]
 WantedBy=multi-user.target
