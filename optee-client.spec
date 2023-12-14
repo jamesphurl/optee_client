@@ -88,7 +88,11 @@ This package contains the libvisio development files.
 make %{?_smp_mflags} V=1
 
 %install
+%if 0%{?cmake_install}
 %cmake_install
+%else
+DESTDIR="%{buildroot}" %__cmake --install .
+%endif
 mkdir -p %{buildroot}/%{_sysconfdir}/modprobe.d
 %{__install} -m 0644 tee-supplicant/conf/tpm_ftpm_tee.conf %{buildroot}%{_sysconfdir}/modprobe.d/tpm_ftpm_tee.conf
 %{__install} -d %{buildroot}%{_unitdir}
