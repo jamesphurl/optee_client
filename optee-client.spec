@@ -16,12 +16,12 @@
 #
 
 
-%define libname libteec1
+%define libname libteec2
 %define libname2 libckteec0
 %define libname3 libseteec0
 %define libname4 libteeacl0
 Name:           optee-client
-Version:        3.22.1
+Version:        3.22.2
 Release:        0
 Summary:        A Trusted Execution Environment client
 License:        BSD-2-Clause
@@ -119,6 +119,8 @@ systemctl daemon-reload >/dev/null 2>&1 || :
 %{_sbindir}/tee-supplicant
 %{_sysconfdir}/modprobe.d/tpm_ftpm_tee.conf
 %{_unitdir}/tee-supplicant.service
+%{_libdir}/pkgconfig/teeacl.pc
+%{_libdir}/pkgconfig/teec.pc
 
 %files devel
 %{_includedir}/*.h
