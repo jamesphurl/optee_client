@@ -21,7 +21,7 @@
 %define libname3 libseteec0
 %define libname4 libteeacl0
 Name:           optee-client
-Version:        4.2.2
+Version:        4.2.3
 Release:        0
 Summary:        A Trusted Execution Environment client
 License:        BSD-2-Clause
@@ -84,7 +84,7 @@ This package contains the libvisio development files.
 %setup -q -n optee_client-%{version}
 
 %build
-%cmake -DRPMB_EMU=0
+%cmake -DRPMB_EMU=0 -B .
 make %{?_smp_mflags} V=1
 
 %install

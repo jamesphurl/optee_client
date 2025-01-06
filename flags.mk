@@ -2,7 +2,6 @@
 # COMMON COMPILATION FLAGS                                              #
 #########################################################################
 
-CROSS_COMPILE   ?= arm-linux-gnueabihf-
 CC              ?= $(CROSS_COMPILE)gcc
 AR		?= $(CROSS_COMPILE)ar
 PKG_CONFIG	?= $(CROSS_COMPILE)pkg-config
