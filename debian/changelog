@@ -1,3 +1,9 @@
+optee-client (4.2.4-1) unstable; urgency=low
+
+  *  Update change log to reflect our current optee-client patch version
+
+ -- Jim Hurley <jahurley@nvidia.com>  Mon, 10 Mar 2025 15:51:22 +0000
+
 optee-client (3.22.1-1) unstable; urgency=low
 
   * Fix build for upstream version 3.22
